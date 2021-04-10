@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<conio.h>
 
-#define num 4
+#define num 8
 struct produto{
     char nome[20];
     float preco;
@@ -30,7 +30,7 @@ int main(){
             getch();
             break;
         case 3:
-            printf("media de preço: %f", media());
+            printf("media de preÃ§o: %f", media());
             getch();
             break;
         case 0:
