@@ -76,5 +76,5 @@ float leve(struct produto a[num]){
         else
             break;
         }
-        return peso;
+        return pesoref;
 };
