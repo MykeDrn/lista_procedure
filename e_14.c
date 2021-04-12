@@ -10,8 +10,8 @@ struct produto{
 }prod[num];
 
 void preencher();
-float media();
-float leve();
+float media(struct produto a[num]);
+float leve(struct produto a[num]);
 
 int main(){
         int choice, trig = 1;
@@ -26,11 +26,11 @@ int main(){
             preencher();
             break;
         case 2:
-            printf("menor peso: %f", leve());
+             printf("menor peso: %.2f", leve(prod));
             getch();
             break;
         case 3:
-            printf("media de preço: %f", media());
+            printf("media de preço: %.2f", media(prod));
             getch();
             break;
         case 0:
@@ -59,20 +59,20 @@ void preencher(){
     }
 
 };
-float media(){
+float media(struct produto a[num]){
     int i = 0;
     float media = 0;
     for(i; i<num; i++){
-        media = media+prod[i].preco;
+        media += a[i].preco;
     }
     return media/num;
 };
-float leve(){
+float leve(struct produto a[num]){
     int i = 0;
     float peso = 100000000.000000000000;
     for(i; i<num; i++){
-        if(prod[i].peso<=peso)
-            peso = prod[i].peso;
+        if(a[i].peso<pesoref)
+            pesoref = a[i].peso
         else
             break;
         }
